@@ -4,13 +4,10 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
-
-<h4>Signup</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
+<div class="bg">
+    <h1 style="text-align:center; margin:0;">Edit</h1>
+    <div class="form-bg">
+        <form class="form" asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="UserId" />
             <div class="form-group">
@@ -33,15 +30,10 @@
                 <input asp-for="Retype" class="form-control" />
                 <span asp-validation-for="Retype" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
+                <input id="signup" type="submit" value="Save" class="btn btn-primary" />
         </form>
+        <a class="btn-pri" asp-action="Index">Back to List</a>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {
